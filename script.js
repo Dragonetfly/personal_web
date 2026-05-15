@@ -2,13 +2,7 @@ const profile = {
   tags: ['Shanghai', 'AI Tools', 'Reading', 'Learning in public'],
   social: [
     { label: 'GitHub', url: 'https://github.com/' },
-    { label: 'Blog', url: 'https://example.com/' },
     { label: 'Email', url: 'mailto:2931708921@qq.com' }
-  ],
-  featured: [
-    { title: '个人博客', description: '写作、笔记和长期想法', url: 'https://example.com/' },
-    { title: 'GitHub', description: '代码、项目和实验', url: 'https://github.com/' },
-    { title: '作品集', description: '整理值得展示的作品', url: 'https://example.com/' }
   ]
 };
 
@@ -109,34 +103,24 @@ function renderProfile() {
   byId('social-links').innerHTML = profile.social
     .map((item) => `<a href="${item.url}" target="_blank" rel="noreferrer noopener">${item.label}</a>`)
     .join('');
-  byId('featured-links').innerHTML = profile.featured
-    .map((item) => `
-      <a class="featured-card" href="${item.url}" target="_blank" rel="noreferrer noopener">
-        ${renderImage(item.url, item.title, 'featured-visual')}
-        <span>
-          <strong>${item.title}</strong>
-          <small>${item.description}</small>
-        </span>
-      </a>
-    `)
-    .join('');
 }
 
 function renderCategories() {
   const grid = byId('category-grid');
   grid.innerHTML = '';
   categories.forEach((category) => {
-    const section = document.createElement('section');
+    const section = document.createElement('details');
     section.className = `category-card accent-${category.accent}`;
     section.dataset.category = category.title;
-    section.innerHTML = `
-      <div class="category-title">
-        <h3>${category.title}</h3>
-        <span>${category.links.length}</span>
-      </div>
-      <div class="link-list"></div>
+    const summary = document.createElement('summary');
+    summary.className = 'category-title';
+    summary.innerHTML = `
+      <span class="category-name">${category.title}</span>
+      <span class="category-meta">${category.links.length} links</span>
     `;
-    const list = section.querySelector('.link-list');
+    const list = document.createElement('div');
+    list.className = 'link-list';
+    section.append(summary, list);
     category.links.forEach((link) => list.appendChild(createLinkCard(link, category.title)));
     grid.appendChild(section);
   });
@@ -154,6 +138,7 @@ function filterLinks(query) {
       if (isVisible) categoryVisible += 1;
     });
     category.toggleAttribute('hidden', categoryVisible === 0);
+    category.open = Boolean(term && categoryVisible > 0);
     visibleCount += categoryVisible;
   });
 
