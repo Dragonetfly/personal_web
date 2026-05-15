@@ -72,6 +72,19 @@ const categories = [
 const byId = (id) => document.getElementById(id);
 const normalize = (value) => value.toLowerCase().trim();
 
+function getFaviconUrl(url) {
+  const domain = new URL(url).hostname;
+  return `https://www.google.com/s2/favicons?domain=${domain}&sz=128`;
+}
+
+function renderImage(url, title, className) {
+  return `
+    <span class="${className}" aria-hidden="true">
+      <img src="${getFaviconUrl(url)}" alt="" loading="lazy">
+    </span>
+  `;
+}
+
 function createLinkCard(link, categoryTitle) {
   const anchor = document.createElement('a');
   anchor.className = 'link-card';
@@ -80,7 +93,9 @@ function createLinkCard(link, categoryTitle) {
   anchor.rel = 'noreferrer noopener';
   anchor.dataset.search = normalize(`${link.title} ${link.description} ${categoryTitle}`);
   anchor.innerHTML = `
-    <span class="link-mark" aria-hidden="true">${link.title.slice(0, 1)}</span>
+    <span class="link-visual" aria-hidden="true">
+      <img src="${getFaviconUrl(link.url)}" alt="" loading="lazy">
+    </span>
     <span class="link-copy">
       <strong>${link.title}</strong>
       <small>${link.description}</small>
@@ -97,8 +112,11 @@ function renderProfile() {
   byId('featured-links').innerHTML = profile.featured
     .map((item) => `
       <a class="featured-card" href="${item.url}" target="_blank" rel="noreferrer noopener">
-        <strong>${item.title}</strong>
-        <small>${item.description}</small>
+        ${renderImage(item.url, item.title, 'featured-visual')}
+        <span>
+          <strong>${item.title}</strong>
+          <small>${item.description}</small>
+        </span>
       </a>
     `)
     .join('');
