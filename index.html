@@ -5,27 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="A warm personal navigation hub for favorite links, tools, notes, and daily resources.">
     <title>Personal Navigation Hub</title>
-    <link rel="stylesheet" href="styles.css?v=20260515-3">
-    <script src="script.js?v=20260515-3" defer></script>
+    <link rel="stylesheet" href="styles.css?v=20260515-4">
+    <script src="script.js?v=20260515-4" defer></script>
   </head>
   <body>
+    <header class="site-header">
+      <a class="brand" href="#home" aria-label="Jiang home">
+        <span class="logo-mark">J</span>
+        <strong>Jiang</strong>
+      </a>
+      <nav class="top-nav" aria-label="Primary navigation">
+        <a class="active" href="#home">Home</a>
+        <a href="#what-i-do">What I do</a>
+        <a href="#my-work">My work</a>
+      </nav>
+    </header>
+
     <main class="page-shell">
-      <section class="hero" aria-labelledby="profile-name">
-        <div class="profile-card">
-          <img class="avatar" src="assets/avatar.jpg" alt="个人头像">
-          <div class="profile-copy">
-            <p class="eyebrow">Personal Hub</p>
-            <h1 id="profile-name">Jiang</h1>
-            <p class="tagline">写代码，也收集有用和有趣的东西。</p>
-            <p class="profile-intro">这里是一处轻量的个人导航空间，放下日常会反复打开的工具、资料与灵感入口。</p>
-            <p class="signature">Stay curious. Build gently.</p>
-            <div class="status-tags" id="status-tags" aria-label="Status tags"></div>
+      <section class="portfolio-hero" id="home" aria-labelledby="profile-name">
+        <div class="hero-copy">
+          <p class="eyebrow">Hi, my name is Jiang</p>
+          <h1 class="hero-title" id="profile-name">Quiet tools, bright ideas.</h1>
+          <p class="profile-intro" id="what-i-do">这里是一处轻量的个人导航空间，放下日常会反复打开的工具、资料与灵感入口。</p>
+          <p class="signature">Stay curious. Build gently.</p>
+          <div class="hero-actions">
+            <a class="cta-button" href="mailto:2931708921@qq.com">Work together</a>
+            <nav class="social-links" id="social-links" aria-label="Social links"></nav>
           </div>
+          <div class="status-tags" id="status-tags" aria-label="Status tags"></div>
         </div>
-        <nav class="social-links" id="social-links" aria-label="Social links"></nav>
+
+        <div class="portrait-stage" aria-label="Jiang portrait">
+          <span class="floating-sticker sticker-brush" aria-hidden="true">✦</span>
+          <figure class="portrait-frame">
+            <img class="avatar" src="assets/avatar.jpg" alt="个人头像">
+          </figure>
+          <span class="floating-sticker sticker-sun" aria-hidden="true">☼</span>
+          <span class="name-pill">Jiang</span>
+        </div>
       </section>
 
-      <section class="navigation-area" aria-labelledby="nav-title">
+      <section class="navigation-area" id="my-work" aria-labelledby="nav-title">
         <div class="section-heading nav-heading">
           <div>
             <p class="eyebrow">Bookmarks</p>
