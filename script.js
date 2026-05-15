@@ -9,7 +9,10 @@ const categories = [
     links: [
       { title: 'ChatGPT', description: 'AI assistant and research partner', url: 'https://chatgpt.com/' },
       { title: 'Claude', description: 'Long-form thinking and writing', url: 'https://claude.ai/' },
-      { title: 'Perplexity', description: 'Search with source-backed answers', url: 'https://www.perplexity.ai/' }
+      { title: 'Perplexity', description: 'Search with source-backed answers', url: 'https://www.perplexity.ai/' },
+      { title: 'DeepSeek', description: 'AI chat and reasoning assistant', url: 'https://chat.deepseek.com/' },
+      { title: 'Gemini', description: 'Google AI assistant', url: 'https://gemini.google.com/' },
+      { title: '豆包', description: '中文 AI 助手与创作工具', url: 'https://www.doubao.com/' }
     ]
   },
   {
@@ -17,7 +20,11 @@ const categories = [
     accent: 'sage',
     links: [
       { title: 'MDN', description: 'Web platform documentation', url: 'https://developer.mozilla.org/' },
-      { title: 'Vercel', description: 'Frontend deployment platform', url: 'https://vercel.com/' }
+      { title: 'Vercel', description: 'Frontend deployment platform', url: 'https://vercel.com/' },
+      { title: 'Stack Overflow', description: 'Programming Q&A and references', url: 'https://stackoverflow.com/' },
+      { title: 'CodePen', description: 'Frontend experiments and demos', url: 'https://codepen.io/' },
+      { title: 'npm', description: 'JavaScript package registry', url: 'https://www.npmjs.com/' },
+      { title: 'Can I use', description: 'Browser compatibility tables', url: 'https://caniuse.com/' }
     ]
   },
   {
@@ -26,7 +33,10 @@ const categories = [
     links: [
       { title: 'Readwise Reader', description: 'Read, highlight, and review', url: 'https://readwise.io/read' },
       { title: '豆瓣读书', description: 'Books and reviews', url: 'https://book.douban.com/' },
-      { title: '少数派', description: 'Digital life and productivity writing', url: 'https://sspai.com/' }
+      { title: '少数派', description: 'Digital life and productivity writing', url: 'https://sspai.com/' },
+      { title: '知乎', description: '问答、专栏与讨论', url: 'https://www.zhihu.com/' },
+      { title: 'Medium', description: 'Essays and product writing', url: 'https://medium.com/' },
+      { title: 'Hacker News', description: 'Tech news and discussion', url: 'https://news.ycombinator.com/' }
     ]
   },
   {
@@ -35,7 +45,10 @@ const categories = [
     links: [
       { title: 'Notion', description: 'Notes, docs, and lightweight systems', url: 'https://www.notion.so/' },
       { title: 'Figma', description: 'Design and interface references', url: 'https://www.figma.com/' },
-      { title: 'Excalidraw', description: 'Fast sketching and diagrams', url: 'https://excalidraw.com/' }
+      { title: 'Excalidraw', description: 'Fast sketching and diagrams', url: 'https://excalidraw.com/' },
+      { title: 'Google Drive', description: 'Cloud files and documents', url: 'https://drive.google.com/' },
+      { title: 'Canva', description: 'Quick design and visual layouts', url: 'https://www.canva.com/' },
+      { title: 'TinyPNG', description: 'Image compression utility', url: 'https://tinypng.com/' }
     ]
   },
   {
@@ -44,7 +57,10 @@ const categories = [
     links: [
       { title: 'YouTube', description: 'Videos, talks, and tutorials', url: 'https://www.youtube.com/' },
       { title: 'Bilibili', description: '中文视频和学习内容', url: 'https://www.bilibili.com/' },
-      { title: 'Spotify', description: 'Music and podcasts', url: 'https://open.spotify.com/' }
+      { title: 'Spotify', description: 'Music and podcasts', url: 'https://open.spotify.com/' },
+      { title: 'Netflix', description: 'Films and series', url: 'https://www.netflix.com/' },
+      { title: '腾讯视频', description: '中文影视和综艺', url: 'https://v.qq.com/' },
+      { title: '网易云音乐', description: 'Music and playlists', url: 'https://music.163.com/' }
     ]
   },
   {
@@ -53,7 +69,10 @@ const categories = [
     links: [
       { title: 'Google Maps', description: 'Places and routes', url: 'https://maps.google.com/' },
       { title: '小红书', description: '生活灵感和本地探索', url: 'https://www.xiaohongshu.com/' },
-      { title: '天气', description: 'Daily weather glance', url: 'https://weather.com/' }
+      { title: '天气', description: 'Daily weather glance', url: 'https://weather.com/' },
+      { title: '高德地图', description: '国内路线和地点查询', url: 'https://www.amap.com/' },
+      { title: '淘宝', description: '购物和生活消费', url: 'https://www.taobao.com/' },
+      { title: '京东', description: '电商、数码和日用品', url: 'https://www.jd.com/' }
     ]
   }
 ];

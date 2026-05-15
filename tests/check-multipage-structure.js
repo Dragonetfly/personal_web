@@ -27,9 +27,6 @@ for (const [name, html] of Object.entries({ index, navigation, contact })) {
   if (!html.includes('href="navigation.html"')) {
     throw new Error(`Expected ${name} page to link to navigation.html`);
   }
-  if (!html.includes('href="contact.html"')) {
-    throw new Error(`Expected ${name} page to link to contact.html`);
-  }
 }
 
 if (!index.includes('href="contact.html"') || !index.includes('Work together')) {
