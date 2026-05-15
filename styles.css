@@ -84,17 +84,15 @@ a {
 }
 
 .avatar {
-  display: grid;
-  place-items: center;
   width: 72px;
   height: 72px;
   flex: 0 0 auto;
   border: 3px solid #fff;
   border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
   background: linear-gradient(135deg, #d9a071, #f3dbc0);
-  color: #6b3b24;
-  font-size: 28px;
-  font-weight: 800;
+  box-shadow: 0 10px 28px rgba(73, 48, 31, 0.16);
 }
 
 .eyebrow {

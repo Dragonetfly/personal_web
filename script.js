@@ -3,7 +3,7 @@ const profile = {
   social: [
     { label: 'GitHub', url: 'https://github.com/' },
     { label: 'Blog', url: 'https://example.com/' },
-    { label: 'Email', url: 'mailto:hello@example.com' }
+    { label: 'Email', url: 'mailto:2931708921@qq.com' }
   ],
   featured: [
     { title: '个人博客', description: '写作、笔记和长期想法', url: 'https://example.com/' },
