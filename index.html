@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A warm personal navigation hub for favorite links, tools, notes, and daily resources.">
+    <title>Personal Navigation Hub</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main class="page-shell">
+      <section class="hero" aria-labelledby="profile-name">
+        <div class="profile-card">
+          <div class="avatar" aria-hidden="true">P</div>
+          <div class="profile-copy">
+            <p class="eyebrow">Personal Hub</p>
+            <h1 id="profile-name">你的名字</h1>
+            <p class="tagline">写代码，也收集有用和有趣的东西。</p>
+            <div class="status-tags" id="status-tags" aria-label="Status tags"></div>
+          </div>
+        </div>
+        <nav class="social-links" id="social-links" aria-label="Social links"></nav>
+      </section>
+
+      <section class="quick-grid" aria-label="Featured links and note">
+        <div class="panel featured-panel">
+          <div class="section-heading">
+            <p class="eyebrow">Pinned</p>
+            <h2>精选入口</h2>
+          </div>
+          <div class="featured-links" id="featured-links"></div>
+        </div>
+        <aside class="panel note-panel" aria-label="Daily note">
+          <p class="eyebrow">Today</p>
+          <p class="note-text">Keep a small garden of useful links.</p>
+        </aside>
+      </section>
+
+      <section class="navigation-area" aria-labelledby="nav-title">
+        <div class="section-heading nav-heading">
+          <div>
+            <p class="eyebrow">Bookmarks</p>
+            <h2 id="nav-title">常用导航</h2>
+          </div>
+          <label class="search-box">
+            <span class="sr-only">搜索链接</span>
+            <input id="search-input" type="search" placeholder="搜索链接、分类或描述..." autocomplete="off">
+          </label>
+        </div>
+        <div class="category-grid" id="category-grid"></div>
+        <p class="empty-state" id="empty-state" hidden>没有找到匹配的链接，换个关键词试试。</p>
+      </section>
+    </main>
+  </body>
+</html>
