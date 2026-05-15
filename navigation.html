@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Jiang's personal navigation page for tools, reading, media, and daily links.">
+    <title>Jiang | What I do</title>
+    <link rel="stylesheet" href="styles.css?v=20260515-6">
+    <script src="script.js?v=20260515-6" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Jiang home">
+        <span class="logo-mark">J</span>
+        <strong>Jiang</strong>
+      </a>
+      <nav class="top-nav" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a class="active" href="navigation.html">What I do</a>
+        <a href="contact.html">Work together</a>
+      </nav>
+    </header>
+
+    <main class="page-shell inner-page">
+      <section class="page-heading" aria-labelledby="nav-title">
+        <p class="eyebrow">What I do</p>
+        <h1 id="nav-title">常用导航</h1>
+        <p>把日常会反复打开的链接收在一起，按场景折叠，需要时快速展开。</p>
+      </section>
+
+      <section class="navigation-area compact" aria-labelledby="bookmark-title">
+        <div class="section-heading nav-heading">
+          <div>
+            <p class="eyebrow">Bookmarks</p>
+            <h2 id="bookmark-title">资源分类</h2>
+          </div>
+          <label class="search-box">
+            <span class="sr-only">搜索链接</span>
+            <input id="search-input" type="search" placeholder="搜索链接、分类或描述..." autocomplete="off">
+          </label>
+        </div>
+        <div class="category-grid" id="category-grid"></div>
+        <p class="empty-state" id="empty-state" hidden>没有找到匹配的链接，换个关键词试试。</p>
+      </section>
+    </main>
+  </body>
+</html>

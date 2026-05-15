@@ -5,30 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="A warm personal navigation hub for favorite links, tools, notes, and daily resources.">
     <title>Personal Navigation Hub</title>
-    <link rel="stylesheet" href="styles.css?v=20260515-5">
-    <script src="script.js?v=20260515-5" defer></script>
+    <link rel="stylesheet" href="styles.css?v=20260515-6">
   </head>
   <body>
     <header class="site-header">
-      <a class="brand" href="#home" aria-label="Jiang home">
+      <a class="brand" href="index.html" aria-label="Jiang home">
         <span class="logo-mark">J</span>
         <strong>Jiang</strong>
       </a>
       <nav class="top-nav" aria-label="Primary navigation">
-        <a class="active" href="#home">Home</a>
-        <a href="#what-i-do">What I do</a>
+        <a class="active" href="index.html">Home</a>
+        <a href="navigation.html">What I do</a>
+        <a href="contact.html">Work together</a>
       </nav>
     </header>
 
     <main class="page-shell">
-      <section class="portfolio-hero" id="home" aria-labelledby="profile-name">
+      <section class="portfolio-hero" aria-labelledby="profile-name">
         <div class="hero-copy">
           <p class="eyebrow">Hi, my name is Jiang</p>
           <h1 class="hero-title" id="profile-name">Quiet tools, bright ideas.</h1>
-          <p class="profile-intro" id="what-i-do">这里是一处轻量的个人导航空间，放下日常会反复打开的工具、资料与灵感入口。</p>
+          <p class="profile-intro">这里是一处轻量的个人导航空间，放下日常会反复打开的工具、资料与灵感入口。</p>
           <p class="signature">Stay curious. Build gently.</p>
           <div class="hero-actions">
-            <a class="cta-button" href="#contact">Work together</a>
+            <a class="cta-button" href="contact.html">Work together</a>
           </div>
           <div class="status-tags" id="status-tags" aria-label="Status tags"></div>
         </div>
@@ -41,27 +41,6 @@
           <span class="floating-sticker sticker-sun" aria-hidden="true">☼</span>
           <span class="name-pill">Jiang</span>
         </div>
-      </section>
-
-      <section class="contact-panel" id="contact" aria-labelledby="contact-title">
-        <p class="eyebrow">Contact</p>
-        <h2 id="contact-title">保持联系</h2>
-        <p>可以通过邮箱联系我：<a href="mailto:2931708921@qq.com">2931708921@qq.com</a></p>
-      </section>
-
-      <section class="navigation-area compact" id="my-work" aria-labelledby="nav-title">
-        <div class="section-heading nav-heading">
-          <div>
-            <p class="eyebrow">Bookmarks</p>
-            <h2 id="nav-title">常用导航</h2>
-          </div>
-          <label class="search-box">
-            <span class="sr-only">搜索链接</span>
-            <input id="search-input" type="search" placeholder="搜索链接、分类或描述..." autocomplete="off">
-          </label>
-        </div>
-        <div class="category-grid" id="category-grid"></div>
-        <p class="empty-state" id="empty-state" hidden>没有找到匹配的链接，换个关键词试试。</p>
       </section>
     </main>
   </body>

@@ -10,20 +10,20 @@ if (html.includes('href="#my-work"')) {
   throw new Error('Expected top navigation to remove My work');
 }
 
-if (!html.includes('href="#contact"')) {
-  throw new Error('Expected Work together to jump to the contact section');
+if (!html.includes('href="contact.html"')) {
+  throw new Error('Expected Work together to open the contact page');
 }
 
-if (!html.includes('id="contact"')) {
-  throw new Error('Expected a contact section for Work together');
+if (html.includes('id="contact"')) {
+  throw new Error('Expected contact details to live on contact.html, not index.html');
 }
 
 if (script.includes('GitHub') || script.includes('social:')) {
   throw new Error('Expected GitHub and Email social rendering data to be removed');
 }
 
-if (!html.includes('2931708921@qq.com')) {
-  throw new Error('Expected contact section to display the email address');
+if (html.includes('2931708921@qq.com')) {
+  throw new Error('Expected email details to live on contact.html, not index.html');
 }
 
 if (styles.includes('float-sticker') || styles.includes('animation: float')) {

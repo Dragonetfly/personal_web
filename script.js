@@ -94,11 +94,14 @@ function createLinkCard(link, categoryTitle) {
 }
 
 function renderProfile() {
-  byId('status-tags').innerHTML = profile.tags.map((tag) => `<span>${tag}</span>`).join('');
+  const statusTags = byId('status-tags');
+  if (!statusTags) return;
+  statusTags.innerHTML = profile.tags.map((tag) => `<span>${tag}</span>`).join('');
 }
 
 function renderCategories() {
   const grid = byId('category-grid');
+  if (!grid) return;
   grid.innerHTML = '';
   categories.forEach((category) => {
     const section = document.createElement('details');
@@ -140,7 +143,10 @@ function filterLinks(query) {
 function init() {
   renderProfile();
   renderCategories();
-  byId('search-input').addEventListener('input', (event) => filterLinks(event.target.value));
+  const searchInput = byId('search-input');
+  if (searchInput) {
+    searchInput.addEventListener('input', (event) => filterLinks(event.target.value));
+  }
 }
 
 init();
