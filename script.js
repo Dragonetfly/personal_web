@@ -1,9 +1,5 @@
 const profile = {
-  tags: ['Shanghai', 'AI Tools', 'Reading', 'Learning in public'],
-  social: [
-    { label: 'GitHub', url: 'https://github.com/' },
-    { label: 'Email', url: 'mailto:2931708921@qq.com' }
-  ]
+  tags: ['Shanghai', 'AI Tools', 'Reading', 'Learning in public']
 };
 
 const categories = [
@@ -20,7 +16,6 @@ const categories = [
     title: '开发',
     accent: 'sage',
     links: [
-      { title: 'GitHub', description: 'Code hosting and collaboration', url: 'https://github.com/' },
       { title: 'MDN', description: 'Web platform documentation', url: 'https://developer.mozilla.org/' },
       { title: 'Vercel', description: 'Frontend deployment platform', url: 'https://vercel.com/' }
     ]
@@ -100,9 +95,6 @@ function createLinkCard(link, categoryTitle) {
 
 function renderProfile() {
   byId('status-tags').innerHTML = profile.tags.map((tag) => `<span>${tag}</span>`).join('');
-  byId('social-links').innerHTML = profile.social
-    .map((item) => `<a href="${item.url}" target="_blank" rel="noreferrer noopener">${item.label}</a>`)
-    .join('');
 }
 
 function renderCategories() {
@@ -116,7 +108,7 @@ function renderCategories() {
     summary.className = 'category-title';
     summary.innerHTML = `
       <span class="category-name">${category.title}</span>
-      <span class="category-meta">${category.links.length} links</span>
+      <span class="category-meta">${category.links.length}</span>
     `;
     const list = document.createElement('div');
     list.className = 'link-list';

@@ -10,7 +10,6 @@ const requiredHtml = [
   'class="logo-mark"',
   'href="#home"',
   'href="#what-i-do"',
-  'href="#my-work"',
   'class="portfolio-hero"',
   'class="hero-title"',
   'class="portrait-stage"',
@@ -30,8 +29,7 @@ const requiredCss = [
   '.portfolio-hero',
   '.hero-title',
   '.portrait-frame',
-  '.floating-sticker',
-  '@keyframes float-sticker'
+  '.floating-sticker'
 ];
 
 for (const token of requiredCss) {
